@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Lab_1_ASP.NET</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Lab_1_ASP.NET.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Панель навигации -->
+            <div class="navbar navbar-expand-md navbar-dark bg-dark">
+                <!-- меню сайта -->
+                <a class="navbar-brand" href="#">WebLabsV06</a>
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" asp-action="index" asp-controller="home">Лб 1</a>
+                    <a class="nav-item nav-link" asp-controller="product" asp-action="index">Каталог</a>
+                    <a class="nav-item nav-link" asp-area="admin" asp-page="/index">Администрирование</a>
+                </div>
+                <!-- меню сайта - конец -->
+
+                <!-- Информация пользователя -->
+                <partial name="_UserInfoPartial" />
+                <!-- Информация пользователя - конец -->
+            
+            </div> <!-- Панель навигации - конец -->
+            <span class="nav-color"></span>
+        </div><!-- container - конец -->
+    </header><!-- header - конец -->
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="navbar navbar-dark navbar-expand-md bg-dark">
+            <div class="navbar-nav ms-xxl-auto">
+                <!--<i class="fab fa-facebook-f fa-2x"></i>
+                <i class="fab fa-vk fa-2x"></i>
+                <i class="fab fa-twitter fa-2x"></i>-->
+                <a class="nav-item nav-link" href="https://web.telegram.org/">
+                    <i class="fa-brands fa-telegram fa-beat"></i>
+                </a>
+                <a class="nav-item nav-link" href="https://web.whatsapp.com/">
+                    <i class="fa-brands fa-whatsapp fa-beat"></i>
+                </a>
+                <a class="nav-item nav-link" href="https://www.viber.com/">
+                    <i class="fa-brands fa-viber fa-beat"></i>
+                </a>
+            </div>
+        </div>
+        <!--<div class="container">
+            <span class="nav-color">Подвал страницы</span>
+        </div>-->
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

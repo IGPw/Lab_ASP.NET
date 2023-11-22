@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/all.mcss" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Панель навигации -->
+            <div class="navbar navbar-expand-md navbar-dark bg-dark">
+                <!-- меню сайта -->
+                <a class="navbar-brand" href="#">WebLabsV06</a>
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Лб 1</a>
+                    <a class="nav-item nav-link" href="#">Каталог</a>
+                    <a class="nav-item nav-link" href="#">Администрирование</a>
+                </div>
+                <!-- меню сайта - конец -->
+                <!-- Информация пользователя -->
+                <a href="#" class="navbar-text ms-auto">
+                    00,0 руб <i class="fas fa-shopping-cart nav-color"></i> (0)
+                </a>
+                <div class="dropdown ms-4 nav-color">
+                    <button class="dropdown-toggle bg-dark btn btn-outline-dark nav-color" id="dropdownMenuButton" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/avatar.jpg" width="30" alt="User" class="rounded" />
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li class="dropdown-item-text">
+                            <img src="images/avatar.jpg" width="30" alt="User" class="rounded" />
+                            user@mail.ru
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <a class="dropdown-item" href="#">Мои товары</a>
+                        <a class="dropdown-item" href="#">Log off</a>
+                    </ul>
+                </div>
+                <!-- Информация пользователя - конец -->
+            </div> <!-- Панель навигации - конец -->
+            <span class="nav-color"></span>
+        </div><!-- container - конец -->
+    </header><!-- header - конец -->
+    <main class="container">
+        <h1><b>Лабораторная работа 1</b></h1>
+        <h2><b>Список</b></h2>
+        <ol>
+            <ul class="list-inline">
+                <li class="list-inline-item">А. элемент</li>
+                <li class="list-inline-item">1 списка</li>
+            </ul>
+            <ul class="list-inline">
+                <li class="list-inline-item">B. элемент</li>
+                <li class="list-inline-item">2 списка</li>
+            </ul>
+        </ol>
+        <hr />
+        <h2><b>Форма</b></h2>
+        <form>
+            <!-- Checkbox -->
+            <div class="row mb-2">
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Чек-бокс 1
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Чек-бокс 2
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Checkbox end -->
+            <!-- Radio -->
+            <fieldset class="col-sm-3 row mb-3 offset-sm-2">
+                <legend class="col-form-label col-sm-2 pt-0"></legend>
+                <div class="row row-cols-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Радио-1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                            Радио-2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <label class="form-check-label" for="gridRadios3">
+                            Радио-3
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Radio end -->
+            <!-- Login/Password -->
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Логин:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Введите имя">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Пароль:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Введите пароль">
+                </div>
+            </div>
+            <!-- Login/Password end-->
+            <button type="submit" class="btn btn-primary row mb-3">Отправить</button>
+        </form>
+    </main>
+    <footer>
+        <div class="navbar navbar-dark navbar-expand-md bg-dark">
+            <!--<div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="http://www.facebook.com">
+            <i class="fab fa-facebook-f fa-2x"></i>
+        </a>
+        <a class="nav-item nav-link" href="http://www.vk.com">
+            <i class="fab fa-vk fa-2x"></i>
+        </a>
+        <a class="nav-item nav-link" href="http://www.twitter.com">
+            <i class="fab fa-twitter fa-2x"></i>
+        </a>
+    </div>-->
+        </div>
+            <!--<div class="container">
+        <span class="nav-color">Подвал страницы</span>
+    </div>-->
+</footer>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
