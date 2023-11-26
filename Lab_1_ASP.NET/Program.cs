@@ -1,4 +1,5 @@
 using Lab_1_ASP.NET.Data;
+using Lab_1_ASP.NET.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,8 +11,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => {
+    options.SignIn.RequireConfirmedAccount = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireDigit = false;
+})
     .AddEntityFrameworkStores<ApplicationDbContext>();
+  //.AddDefaultTokenProviders();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
