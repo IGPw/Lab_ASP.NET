@@ -10,6 +10,8 @@ namespace Lab_1_ASP.NET.Data {
             using var scope = app.Services.CreateScope();
             using var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
+            //using var role = scope.ServiceProvider.GetService<RoleManager<IdentityRole>>();
+
             // создать БД, если она еще не создана
             context.Database.EnsureCreated();
 
@@ -20,7 +22,7 @@ namespace Lab_1_ASP.NET.Data {
             //        NormalizedName = "admin"
             //    };
             //    // создать роль admin
-            //    await roleManager.CreateAsync(roleAdmin);
+            //    _ = await role.CreateAsync(roleAdmin);
             //}
 
             //// проверка наличия пользователей
