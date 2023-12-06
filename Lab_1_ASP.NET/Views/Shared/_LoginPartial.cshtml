@@ -5,6 +5,7 @@
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
+    @await Component.InvokeAsync("Cart")
     <li class="nav-item">
         <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
     </li>
@@ -12,6 +13,13 @@
         <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
             <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
         </form>
+            @*<form asp-area="Identity"
+              asp-page="/Account/Logout"
+              asp-route-returnurl="@ViewContext.HttpContext.Request.Path">
+                <input type="submit"
+                   value="Log off"
+                   class="dropdown-item" />
+            </form>*@
     </li>
 }
 else
