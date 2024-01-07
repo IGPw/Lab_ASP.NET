@@ -118,7 +118,7 @@ namespace Lab_1_ASP.NET.Areas.Identity.Pages.Account
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
-                if(Input.Avatar != null) { // длбавить логику сохранения
+                if(Input.Avatar != null) { // добавить логику сохранения
                     
                 }
 
